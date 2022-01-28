@@ -1,0 +1,32 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+public class GuessMyNumber {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Guess My Number!");
+        System.out.println("Please think of a number between 0 and 31.");
+        
+        int lowerBound = 0;
+        int upperBound = 31;
+        
+        while (true) {
+            // make a guess
+            int guess = (int)Math.ceil((double)(upperBound + lowerBound)/2.0);
+            
+            // check if the guess is correct
+            System.out.print("Is your number " + guess + "? (Y/N): ");
+           
+            
+            // check if the guess is too high or too low
+            System.out.print("Is your number (H)igher or (L)ower? (H/L): ");
+         
+        }
+        
+        System.out.println("Thank you for playing Guess My Number!");
+    }
+    
+    private static char getChar() {
+        Scanner sc = new Scanner(System.in);
+        return sc.next().charAt(0);
+    }
+}
